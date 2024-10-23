@@ -1,0 +1,507 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav__list{
+    background-color: rgb(249, 244, 245);
+    display: flex;
+   
+   
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+
+
+    
+}
+.nav__ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+  
+}
+.nav__ul .item
+{
+  margin: 10px;
+  color: pink;
+  padding: 10px;
+  font-size: 15px;
+
+
+}
+.item a{
+    text-decoration: none;
+    color: pink;
+}
+.item a:hover{
+    color: red;
+}
+.fa-solid{
+    font-size: 30px;
+    cursor: pointer;
+color: red;
+position: relative;
+left: -180px;
+
+
+
+
+}
+
+
+
+
+/* Contenedor */
+.biscocho-container {
+    position: relative;
+    width: 100%;
+    height: 98vh;
+    overflow: hidden;
+}
+
+/* Biscocho */
+.biscocho {
+    width: 80px; /* Tamaño ajustable */
+    height: 50px;
+    background-color: brown; /* Color del biscocho */
+    border-radius: 25px 25px 0 0; /* Bordes redondeados arriba */
+    position: absolute;
+    animation: caer 6s infinite; /* Duración de la animación ajustada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Decoración del biscocho */
+.biscocho::before {
+    content: '';
+    width: 50px; /* Tamaño de la cobertura */
+    height: 10px;
+    background-color: #E74C3C; /* Color de la cobertura */
+    position: absolute;
+    top: -10px; /* Posición de la cobertura */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Sprinkles */
+.biscocho::after {
+    content: '';
+    width: 8px; /* Tamaño de los sprinkles */
+    height: 8px;
+    background-color: red; /* Color de un sprinkle */
+    border-radius: 50%; /* Hacer que sea un círculo */
+    position: absolute;
+    top: 15px;
+    left: 20px; /* Posición de un sprinkle */
+}
+
+.biscocho:nth-child(1) {
+    top: -10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.biscocho:nth-child(2) {
+    top: -20%;
+    left: 30%;
+    animation-delay: 0.2s;
+}
+
+.biscocho:nth-child(3) {
+    top: -30%;
+    left: 50%;
+    animation-delay: 0.4s;
+}
+
+.biscocho:nth-child(4) {
+    top: -40%;
+    left: 70%;
+    animation-delay: 0.6s;
+}
+
+.biscocho:nth-child(5) {
+    top: -50%;
+    left: 90%;
+    animation-delay: 0.8s;
+}
+
+@keyframes caer {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 0.8;
+        filter: drop-shadow(0 0 10px rgb(22, 22, 22));
+        transform: translateY(50vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(100vh);
+    }
+}
+
+
+
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    justify-content: space-around; /* Espacio alrededor de las tarjetas */
+
+    min-height: 100vh;
+    padding: 20px;
+  }
+  h1
+  {
+    text-align: center;
+    color: #ff9cbb;
+    font-family: fantasy;
+  }
+  h2{
+    font-size: medium;
+    font-family: fantasy;
+    color: #fea5c1;
+  }
+  
+  .producto {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #ff9cbb; /* Borde rosado claro */
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 156, 187, 0.5); /* Sombra rosada */
+    width: 30%; /* Ancho ajustado para 3 tarjetas por fila */
+    margin: 20px 0; /* Margen para separar las filas */
+    transform-style: preserve-3d; /* Efecto 3D */
+    perspective: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .producto:hover {
+    transform: rotateY(10deg) rotateX(10deg); /* Efecto 3D al hacer hover */
+    box-shadow: 0 10px 20px rgba(255, 156, 187, 0.8); /* Sombra más intensa */
+  }
+  
+  .producto img {
+    width: 10rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .producto:hover img {
+    transform: scale(1.05); /* Zoom suave al hacer hover */
+  }
+  
+
+  .testimonio {
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: relative;
+    top: 15vh;
+}
+
+.opinion {
+    text-align: center;
+    color: #f08808;
+    font-size: 36px;
+    font-family: 'Georgia', serif;
+    margin-bottom: 40px;
+}
+
+.testimonios-contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonio-item {
+    background-color: #f9f9f9;
+    width: 30%;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonio-item:hover {
+    transform: scale(1.05);
+}
+
+.testimonio-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.testimonio-contenido {
+    flex: 1;
+}
+
+.gorra-h2 {
+    font-size: 20px;
+    color: #f08808;
+    font-family: 'Georgia', serif;
+}
+
+.testimonio-p {
+    color: #333;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.estrellas {
+    display: flex;
+    gap: 5px;
+}
+
+.estrella-opinion {
+    font-size: 20px;
+    color: #f08808;
+}
+
+
+
+
+.container-footer {
+    background:#ff9cbb;
+
+    color: #fff;
+   width: 100%;
+    position: relative;
+    text-align: center;
+    height: 70vh;
+    display: inline-block;
+
+    top: 50vh;
+  
+}
+.texto{
+    font-family: fantasy;
+    color: brown;
+
+}
+.imagen-footer{
+    width: 20%;
+    filter: drop-shadow(0 0 30px rgba(249, 246, 246, 0.8));
+
+
+
+}
+.footer-item{
+
+}
+.footer-small{
+filter: drop-shadow(0 0 10px rgb(0, 233, 85));
+
+    margin-bottom: -140px;
+    font-size: 16px;
+    position: relative;
+    top: 50px;
+  
+
+    
+}
+
+
+.footer-ul li{
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 20px;
+
+}
+
+
+
+
+.fa-brands{
+    font-size: 48px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: linear-gradient(-135deg, rgb(45, 109, 3));
+    color: rgb(241, 245, 243);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(2, 69, 13, 0.5);
+    transition: all .4s ease-in-out;
+    animation-delay: 2s;
+    animation: float 5s ease-in-out infinite;
+
+}
+
+
+.fa-brands:hover {
+    transform: scale(1.2);
+  } 
+
+
+  @keyframes float{
+    0%{
+        transform: translateY(0px);
+
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+figure{
+    font-size: 70px;
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .testimonio-item {
+        width: 45%; /* Cambiamos a 45% para tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonio {
+        width: 90%;
+    }
+
+    .testimonio-item {
+        width: 100%; /* Una columna para móviles */
+        flex-direction: column; /* Imagen arriba, texto abajo */
+        text-align: center;
+    }
+
+    .testimonio-img {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+
+    .gorra-h2 {
+        font-size: 18px;
+    }
+
+    .opinion {
+        font-size: 30px;
+    }
+
+    .testimonio-p {
+        font-size: 14px;
+    }
+
+    .estrella-opinion {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+   @media only screen and (max-width: 1080px) {
+
+    .fa-solid {
+     display: block;
+    }
+
+    .nav__ul {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 100%;
+        background-color: #fea5c1;
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav__ul.active {
+        display: flex;
+    }
+
+    .nav__ul .item {
+        margin: 15px 0;
+    }
+
+    .nav__ul .item a {
+        font-size: 18px;
+        color: aqua;
+    }
+    body{
+        height: 50px;
+        width: 100%;
+        max-width: 1080%;
+        margin: auto;
+    }
+    .item a:hover{
+        color: pink;
+    }
+}
+
+@media (max-width: 500px) {
+    .producto {
+      width: 45%; /* Ajusta el ancho para 2 tarjetas por fila */
+    }
+  }
+  
+  /* Tablets y móviles en vertical: 1 tarjeta por fila */
+  @media (max-width: 500px) {
+    .producto {
+      width: 90%; /* Ocupa casi todo el ancho de la pantalla */
+      margin: 3px auto; /* Centra las tarjetas */
+    }
+  }
